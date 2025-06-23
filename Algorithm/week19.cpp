@@ -16,7 +16,7 @@ int main() {
     cout << "Nilai = " << mahasiswa1.nilai << endl;
 
     mahasiswa mahasiswa2;
-    mahasiswa2 = {2, "Rizky", 200.0};
+    mahasiswa2 = {2, "Rina", 200.0};
     cout << "ID = " << mahasiswa2.id << endl;
     cout << "Nama = " << mahasiswa2.nama << endl;
     cout << "Nilai = " << mahasiswa2.nilai << endl;
