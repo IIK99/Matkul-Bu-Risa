@@ -1,0 +1,35 @@
+body{
+    background-color: black; font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+h1, h2 {
+    color: greenyellow;
+}
+
+ul li a {
+    color: orange;
+}
+
+ol li a {
+    color: red;
+}
+
+/* jika mengunakan id memanggilnya menggunakan #, dan jika class memanggilnya menggunakan . (bisa juga dengan memanggil ujungnya saja, liat dicontoh) */
+
+#p1 {
+    color: #003a9e;
+}
+
+.p2 {
+    color: rgb(0, 255, 195);
+}
+
+.cetak-tebal {
+    font-weight: bold;
+}
+
+p.cetak-tebal {
+    font-weight: 500px;
+} /*tag yang ini gak jalan */

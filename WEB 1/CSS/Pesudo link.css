@@ -1,0 +1,58 @@
+.HELLO:link {
+    color: orange;
+}
+
+.HELLO:hover {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.HELLO:active {
+    font-style: italic;
+}
+
+.HELLO:visited {
+    color: red;
+}
+
+/* ini perintah untuk list link pertama akan berwarna hijau
+li:first-child a {
+    color: greenyellow;
+} 
+
+/* ini perintah untuk list link terakhir akan berwarna hijau
+li:last-child a {
+    color: greenyellow;
+} 
+
+/* ini perintah untuk list link lebih specifik misal 2, maka akan berwarna hijau
+li:nth-child(2) a {
+    color: greenyellow;
+} 
+
+/* ini perintah untuk list link kelipatan 2, maka akan berwarna hijau
+li:nth-child(2n) a {
+    color: greenyellow;
+} 
+atau juga bisa pakai ganjil (even), genap (genap)
+li:nth-child(even/odd) a {
+    color: greenyellow;
+}
+*/
+
+/* ini perintah untuk list link kelipatan 3 di mulai dari link ke 1, */ 
+li:nth-child(3n-2) a {
+    color: greenyellow;
+}
+
+/* atau bisa juga seperti ini maka hasilnya tetep sama
+li:nth-child(3n+1) a {
+    color: greenyellow;
+}
+*/
+
+p:first-of-type {
+    color: red;
+}
+

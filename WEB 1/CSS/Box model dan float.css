@@ -1,0 +1,209 @@
+
+
+
+
+
+
+
+
+
+/* ini gagal gak tau ada beberapa gak ada yang bisa
+di import img di css via url, ada juga gak sesuai dengan 
+video dengan hasil saya sendiri saya juga binggung hehe */
+
+
+
+
+
+
+
+
+
+
+
+
+/*ini script reset css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, 
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*ini style yang atas script reset css*/
+
+body {
+    font: 16px/28px arial, sans-serif;
+    /* font ini size font (16), ini antar spacing (28)*/
+    background-image: url(../CSS/bg.png);
+    background-size: 300px;
+    background-repeat: repeat;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+    background-color: white;
+}
+
+.header {
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+.header .judul {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-inline-start: auto;
+    margin-block-start: auto;
+}
+
+.header a {
+    text-decoration: none;
+    color: salmon;
+    padding: 3px;
+}
+
+.header a:hover {
+    background-color: yellowgreen;
+    color: blue;
+}
+
+
+.hero {
+    height: 400px;
+    width: 960px;
+    background-image: url(../CSS/bg\ 1.png);
+    background-size: cover;
+    background-position: 0 -20;
+    border-bottom: 5px solid lightskyblue;
+    border-top: 5px solid red;
+}
+
+.main {
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.main h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.main .penulis {
+    display: flex;
+    font-size: 14px;
+    margin-top: -3px;
+}
+
+.main .penulis a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.main p {
+    margin-bottom: 20px;
+    font-size:  14px;
+}
+
+
+
+/*ini slidebar*/
+
+.slidebar {
+    width: 300px;
+    float: right;
+    padding: 20px;
+}
+
+.slidebar h3 {
+    font-weight: bold;
+    color: red;
+}
+
+.slidebar img {
+    float: left;
+    padding-right: 10px;
+}
+
+.slidebar p {
+    font: 14px/18px arial;
+}
+
+.footer {
+    background-color: hsl(0, 51%, 29%);
+    padding: 10px;
+}
+
+.footer .copy {
+    color:  white;
+    text-align: center;
+    
+}
+
+
+/* ini script clear */
+
+.cf ::before,
+.cf ::after {
+    content: " ";
+    display: table;
+}
+
+.cf ::after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}

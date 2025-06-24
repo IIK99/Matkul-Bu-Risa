@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Posisition static and relative</title>
+
+        <style>
+
+            body {
+                height: 2000px;
+            }
+            div {
+                width: 150px;
+                height: 150px;
+            }
+
+            .fix {
+                background-color: blue;
+                position: fixed;
+                height: 40px;
+                width: 100%;
+            }
+            .satu {
+                background-color: lightgreen;
+            }
+            .dua {
+                background-color: violet;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+            .tiga {
+                background-color: gold;
+            }
+
+            .satu1 {
+                background-color: lightgreen;
+            }
+            .dua2 {
+                background-color: violet;
+                position: relative;
+                top: 30px;
+                left: 50px;
+            }
+            .tiga3 {
+                background-color: gold;
+            }
+            
+            .container {
+                width: 400px;
+                height: 450px;
+                border: 10px solid red;
+                position: absolute;
+            }
+
+            .a {
+                background-color: lightgreen;
+            }
+            .b {
+                background-color: violet;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            /* perhatikan container & b posisitionnya harus sama-sama absolute
+            kalo tidak si b/violet akan keluar dari containernya yaitu */
+            }
+            .c {
+                background-color: gold;
+            }
+
+            .fix {
+                background-color: blue;
+                position: fixed;
+                height: 10px;
+                width: 30%;
+                margin-left: 70%;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <div class="fix"></div>
+        
+        <p>Penjelasan ada di bawah tentang Posisition statistic & relative <br>
+        static tidak dapat merubah apa-apa karena defaultnya statistic</p>
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+        
+        <p>Fungsi dari statistic & relative yaitu kayak memindahkan 1 layer ke atas tanpa harus
+        ikut menggeser yang lain di sekitarnya
+        </p>
+        <div class="satu1"></div>
+        <div class="dua2"></div>
+        <div class="tiga3"></div>
+
+        <p>Fungsi dari absolute & fixed, absolute naik 1 layer tapi yang layer bawah
+        ikut naik tidak seperti relative yang bawahnya kosong jadi benar-benar bertumpuk
+        sedangkan fixed yaitu ketika halaman web di scrool dia tidak ikut pindah tetap
+        diposisinya, Fix yaitu kayak always top jadi setiap scroll isi conten juga tetep
+        selalu diatas contoh kayak Facebook
+        </p><br><br><br><br>
+        <div class="container">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+
+    </body>
+</html>

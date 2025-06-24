@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: rgb(152, 152, 152);
+    font-size: 18px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 50px;   
+}
+
+.container {
+    display: grid;
+    gap: 5px;
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas:
+        'hero hero feature-1'
+        'hero hero feature-2';
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 350px;
+    background-image: url(../CSS-Grid/img/gundam-gundam-wing-wallpaper-preview.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+.hero > * {
+    display: none;
+}
+
+.features {
+    background-color: black;
+    display: grid;
+    /* justify-content: center;
+    align-content: center; 
+    atau 1 tag biar cepat*/
+    place-content: center;
+    text-align: center;
+}
+
+.feature-1 {
+    grid-area: feature-1;
+    background-image: url(../CSS-Grid/img/desktop-wallpaper-gundam-rx-78-gundam-creative-graphics-gundam-rx-78-2.jpg);
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background-image: url(../CSS-Grid/img/mobile-suit-gundam-mech-rx-78-gundam-gunpla-anime-hd-wallpaper-preview.jpg);
+    background-size: cover;
+}
+
+.features.price {
+    font-weight: 700;
+}
+
+/* navigation */
+.menu {
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.menu .brand {
+    font-size: 1.3em;
+}
+
+.menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+} 
+
+.menu a {
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* responesive breakpoint */
+@media (max-width: 1024px) {
+    .menu {
+        order: inherit;
+        grid-template-columns: 1fr;
+    }
+
+    .menu .brand {
+        display: none;
+    }
+
+    .hero > * {
+        display: block;
+        background-color: rgb(61, 61, 61);
+        padding: 5px;
+        margin-bottom: 5px;
+    }  
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+    }
+}
+
+@media (max-width: 768) {
+
+}
+
+@media (max-width: 600px) {
+    .header {
+        grid-template-areas: 
+        'hero'
+        'feature-1'
+        'feature-2';
+    }
+
+}

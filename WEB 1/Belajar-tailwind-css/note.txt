@@ -1,0 +1,10 @@
+Jika coding belum selesai, maka harus di hentikan dulu run terminalnya (Ctrl+C).
+Ada cara mudahnya agar tidak perlu mengetik ulang script di terminanya, yaitu:
+ke tailwind.confid.js, tulis scriptnya di bagian script.
+npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch.
+
+Lalu jika mau lanjut lagi pergi ke terminal ketik:
+npm run dev (dev nama yang tadi dibuat di script awalnya)
+
+JIka sudah selesai final projectnya maka ketik ini diterminal gar di mini size filenya
+npx tailwindcss -o ./public/css/final.css --minify

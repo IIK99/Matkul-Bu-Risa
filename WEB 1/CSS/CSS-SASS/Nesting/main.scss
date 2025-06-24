@@ -1,0 +1,37 @@
+// SASS VARIABLE 
+$primary-color: lightblue;
+$second-color: yellow;
+// ini bisa dipanggil secara umum
+
+
+body {
+    background-color: $second-color;
+}
+
+// nesting (bersarang)
+.main {
+    background-color: lightblue;
+    
+    .main-heading {
+        font-size: 23m;
+    }
+    
+    .main-paragraph {
+        font-size: 1.4em;
+    }
+    
+    &:hover {
+        background-color: salmon;
+    }
+}
+
+footer {
+    $text-color: red !global;
+    // kecuali ini, ini tidak bisa dipanggil secara umum hanya bisa dalam
+    // 1 bungkus saja (footer), bisa saja jadi umum asal tambah !global agar bisa dipanggil
+    h1 {
+        color: $text-color;
+    }
+}
+
+// & artinya parrent selector  //

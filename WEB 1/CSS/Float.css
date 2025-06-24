@@ -1,0 +1,86 @@
+.container1 {
+    width: 500px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.img {
+    float: right;
+    margin: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+/*Ini harusnya gambarnya dikelilingi teks tapi ini gak mau jalan gak tau kenapa
+diatur size gambarnya juga gak mau jalan. Seharusnya logo dikiri dan
+siteksnya ada disebelah kanannya jika sudah melewati logo baru ke bawah*/
+
+.container2 {
+    width: 500px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color:  white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    margin: 2px;
+    float: left;
+}
+
+.clear {
+    clear: left;
+}
+.container3 {
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+
+.kiri {
+    width: 150px;
+    height: 500px;
+    background-color: red;
+    float: left;
+}
+
+.tengah {
+    width: 500px;
+    height: 500px;
+    background-color: yellow;
+    float: left;
+}
+
+.kanan {
+    width: 150px;
+    height: 500px;
+    background-color: blue;
+    float: left;
+}
+
+/*script clear css*/
+
+.cf ::before,
+.cf ::after {
+    content: "";
+    display: table;
+}
+
+.cf ::after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}

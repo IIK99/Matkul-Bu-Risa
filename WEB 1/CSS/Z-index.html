@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>z-index</title>
+
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+            }
+
+            .satu {
+                background-color: salmon;
+                z-index: 2;
+                top: 100px;
+                left: 100px;
+
+            }
+
+            .dua {
+                background-color: lightgreen;
+                top: 200px;
+                left: 200px;
+                z-index: 1;
+            }
+            
+            .tiga {
+                background-color: royalblue;
+                top: 300px;
+                left: 300px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <p>Secara defaultnya ini di stylenya menggunakan Posisition absolute, nah
+        itu semua si block kotaknya menjadi 1 saling bertumpuk. Maka dari itu penggunaan
+        z-index adalah untuk menaikan element tersebut ke atas, semakin besar nilai
+        z-indexnya maka semakin paling atas juga posisi (tapi ini berbeda ya naik
+        ke atasnya bukan seperti layer) <br>
+        Ini gambar sebelumnya merah paling bawah, hijau tengah dan biru paling atas
+        kini sebaliknya</p>
+        
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+        
+    </body>
+</html>

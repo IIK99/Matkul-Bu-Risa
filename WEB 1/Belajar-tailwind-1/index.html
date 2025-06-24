@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar TailwindCSS 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,200&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <!--ini script buat custom jika di default-nya tidak ada bisa masukkan di sini
+    dan ini berulang bisa dipakai terus-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark:bg-slate-800 dark:text-slate-200">
+    
+    <h1 class="font-poppins text-2xl font-bold"> <span class="bg-gradient-to-r from-blue-500 to-teal-400">Mari belajar TailwindCSS bagian 1</span> <br>
+    Bisa lebih lengkapnya di web tailwindcss langsung</h1>
+
+    <section class="mb-10 bg-sky-400">
+        <h2 class="text-2xl text-center font-semibold">Spacing</h2>
+        <div class="ml-4 my-2 bg-green-400">Margin <br> ML Margin left 4, MY Margin sumbu Y 2</div>
+        <div class="p-8 bg-pink-400">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-yellow-200">
+        <h2 class="font-poppins text-2xl font-bold text-center">Sizing width & height</h2>
+        <div class="w-32 h-32 bg-red-500 text-center">Kotak width</div>
+        <div class="max-w-xs bg-purple-400">kotak min width</div>
+        <div class="min-h-fit bg-green-400">kotak max width <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt dolores! Laboriosam iusto fuga id, veritatis illo consequuntur tenetur perferendis!</div>
+    </section>
+
+    <section class="font-poppins max-w-3xl mx-auto">
+        <h2 class="mb-4 uppercase text-2xl font-bold bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">Belajar mengenai typography pada tailwindcss</h2>
+        <div class="mb-4 text-lg font-semibold">By Ikmal</div>
+        <!--tidak tahu kenapa kalau pakai tag p si teksnya hilang, makanya diganti ke span-->
+        <span>Lorem, ipsum dolor sit amet <a class="underline font-semibold bg-yellow-200 text-blue-500" href="#">consectetur</a> adipisicing elit. Aliquam explicabo mollitia quisquam repellat cupiditate. Unde corrupti beatae laudantium rem sit voluptas, quisquam nisi non doloremque placeat, cum, consequatur vel quae.
+        </span>
+        
+        <blockquote class="mb-4 italic font-thin">
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus facere delectus cumque alias voluptatibus velit assumenda omnis ratione culpa in."
+        </blockquote>
+    </section>
+    <!--ini bisa tetap custom tanpa harus masukkan config ke script dengan
+    cara [isi custom] ini hanya bisa dilakukan 1x kalau script di atas bisa dipanggil
+    berulang-->
+    <!--tidak tahu kenapa kalau pakai tag p si teksnya hilang, makanya diganti ke span-->
+    <div class="p-5 text-2xl max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll font-poppins text-white" style="background-image: url('https://source.unsplash.com/random/1000x600/?coffee');">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam, incidunt vitae omnis, aspernatur eaque deserunt ad minima in harum earum similique! Sit tempora enim numquam ad labore, deleniti illum beatae eveniet id ipsam quisquam assumenda facilis porro aperiam inventore veniam voluptatem animi eaque praesentium soluta saepe nihil? Pariatur commodi alias enim nihil sed, eos exercitationem ab, expedita praesentium ea quis ducimus. Magnam eum ea ipsam distinctio reiciendis dignissimos at illum, eligendi ab! Recusandae deserunt eaque eos non officiis! Quam dolor non recusandae velit molestias. Eos maiores iure natus commodi, sint dolore. Libero quae ut corporis vel similique sit deserunt repudiandae voluptate maiores quod ratione quo consequuntur accusantium reprehenderit a omnis animi quas cum, quasi ullam velit quaerat facere eos suscipit? Velit quae quod nostrum officia molestiae neque, fuga qui animi fugit unde dolorum ducimus laudantium cupiditate nulla omnis facilis, debitis perspiciatis architecto deserunt? Ea cumque corporis perferendis itaque, tempore quod ratione. Ad, dolor ipsum. Officia accusamus quasi dolorem debitis tempora nisi expedita quae qui! Expedita, molestiae quos velit corporis, laboriosam optio molestias id temporibus perspiciatis recusandae qui, delectus amet aliquam officia repudiandae dignissimos iste nostrum ea consequuntur veritatis ipsam cupiditate! Nesciunt alias nam facilis amet voluptate similique, eos eligendi.
+    </div>
+
+    <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-cover" style="background-image: url(/img/lp.jpg);"></div>
+
+    <hr class="my-20" />
+
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button class="my-10 bg-sky-500 px-5 py-2 text-white font-Poppins font-semibold rounded-full block mx-auto border-2 border-sky-700 shadow-lg
+    hover:bg-sky-700 active:bg-sky-900 focus:ring focus:ring-sky-700 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">Simpan</button>
+
+    <div class="max-w-lg my-10 border border-slate-300 rounded-xl mx-auto p-5 shadow-md font-poppins hover:bg-sky-500 group dark:hover:bg-slate-300">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:bg-slate-800">My Card</h5>
+        <!--ntah kenapa kalo pake tag p si textnya hilang, makanya diganti ke span-->
+        <!--ini lebih parah, tidak tahu kenapa kalau pakai span stylenya tidak jalan-->
+        <span class="text-slate-600 group-hover:text-white  selection:bg-lime-300 selection:text-slate-900
+        first-letter:uppercase first-line:-tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates consequatur officia excepturi inventore fugit exercitationem eos maiores, perspiciatis et repellendus temporibus hic illo voluptatibus deleniti vitae soluta atque quis mollitia tenetur culpa! Deserunt nobis ipsum sequi dolor vitae fuga minima ipsa quae obcaecati, amet doloremque soluta recusandae rerum eius.
+        </span>
+    </div>
+
+    <div class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-poppins p-5">
+        <form action="">
+            <label for="E-Mail">
+                <span class="block font-semibold mb-1 text-slate-700">E-Mail (wajib diisi)</span>
+                <input type="email" id="E-Mail" placeholder="Masukan E-Mail" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer:" required>
+                <p class="text-sm m-1 text-pink-700">
+                    E-Mail tidak valid
+                </p>
+            </label>
+            
+            <style>
+                input:invalid + p {
+                    display: block;
+                }
+            
+                p {
+                    display: none;
+                }
+            </style>
+            
+        </label>
+        </form>
+    </div>
+
+    <hr class="my-20">
+
+    <div class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:rotate-180 hover:bg-pink-500 transition origin-top-left"></div>
+    
+    <div class="w-40 h-40 mx-auto mt-20 group">
+        <div class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-1000"></div>
+    </div>
+
+    <div class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg mt-20 animate-pulse"></div>
+
+    <hr class="my-20 border-t-4">
+
+    <div class="container mx-auto"> FLOAT
+        <div class="border rounded-lg shadow-lg p-10 relative">
+            <div class="w-10 h-10 bg-pink-200 rounded-full flex fixed bottom-5 right-5 cursor-pointer"><a href="#" class="text-2xl m-auto">🔝</a></div>
+            <img src="img/lp.jpg" alt="lp" width="150" class="float-left mr-3"> 
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quam id et molestias ea laborum distinctio vitae libero ad praesentium vel, minima dolores asperiores expedita porro dolore quo facere! Expedita!</span>
+        </div>
+    </div>
+
+    <hr class="my-20 border-t-4">
+    
+    <div class="container mx-auto border-4 border-black rounded-lg shadow-lg p-5 mt-20 columns-3">
+        <img src="https://source.unsplash.com/random/600x400?flower" alt="img">
+        <img src="https://source.unsplash.com/random/600x400?coffee" alt="img" class="mb-4">
+        <img src="https://source.unsplash.com/random/600x400?office" alt="img" class="mb-4">
+        <img src="https://source.unsplash.com/random/600x400?tree" alt="img" class="mb-4">
+        <img src="https://source.unsplash.com/random/600x400?laptop" alt="img" class="mb-4">
+        <img src="https://source.unsplash.com/random/600x400?window" alt="img" class="mb-4">
+    </div>
+
+    <hr class="my-20 border-t-4">
+
+    <div class="flex container PX-6 max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+        <div class="lg:p-12 lg:flex-1">
+        <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl md:text-6xl">SUIT <span class="text-red-500">GUNDAM</span></h3>
+        <img src="img/rx_78.png" alt="RX-78" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-top lg:hidden">
+        <h2 class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl">GUNDAM RX-78</h2>
+        <P class="flex mt-2 text-slate-600 sm:mt-4 sm:text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ad, sed praesentium, non, a quaerat vero iste expedita reiciendis quidem rerum ducimus rem! Blanditiis omnis eligendi vitae? Pariatur, quibusdam voluptatem!
+        </P>
+        <div class="mt-4 sm:mt-6">
+            <a href="#" class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base">ALL ABOUT GUNDAM</a>
+        </div>
+        </div>
+        <div class="hidden lg:flex lg:w-1/2">
+            <img src="img/rx_78.png" alt="img" class="object-cover rounded-l-3xl">
+        </div>
+    </div>
+
+    <h2 class="mt-24 mb-10 text-center font-bold text-3xl text-slate-700">MY GALLERY</h2>
+
+    <div class="container mx-auto p-6 sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly">
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 hover:scale-105">
+            <img src="https://source.unsplash.com/random/600x400?food" alt="img" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="flex text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, quidem.</p>
+            </div>
+        </div>
+
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 hover:scale-105">
+            <img src="https://source.unsplash.com/random/600x400?plane" alt="img" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="flex text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, quidem.</p>
+            </div>
+        </div>
+
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 hover:scale-105">
+            <img src="https://source.unsplash.com/random/600x400?book" alt="img" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="flex text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, quidem.</p>
+            </div>
+        </div>
+
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 hover:scale-105">
+            <img src="https://source.unsplash.com/random/600x400?swiss" alt="img" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="flex text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, quidem.</p>
+            </div>
+        </div>
+
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 hover:scale-105">
+            <img src="https://source.unsplash.com/random/600x400?japan" alt="img" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="flex text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, quidem.</p>
+            </div>
+        </div>
+
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 hover:scale-105">
+            <img src="https://source.unsplash.com/random/600x400?lake" alt="img" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="flex text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, quidem.</p>
+            </div>
+        </div>
+
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 hover:scale-105">
+            <img src="https://source.unsplash.com/random/600x400?view" alt="img" class="w-full">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="flex text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, quidem.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-20 border-t-4">
+
+    <div class="mt-64 p-2 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4 md:p-4">
+        <h2 class="h-15 text-xl font-semibold text-slate-700 md:col-start-2 md:row-start-2 md:flex"><span class="self-center">Welcome to Ikmal99</span></h2>
+        <div class="h-15 text-lg font-bold text-slate-600 md:col-start-3 md:row-start-3 md:flex"><span class="self-end">@iku99</span></div>
+        
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500">
+            <img src="https://source.unsplash.com/random/600x400?pet" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] md:col-start-1 overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?outfit" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] md:col-start-3 overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?sky" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] md:col-start-4 overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?music" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?citylight" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?ticket" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] mid:col overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?train" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] md:col-start-2 overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?rail" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?sea" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 hover:shadow-md hover:shadow-sky-600 transition-all duration-500"">
+            <img src="https://source.unsplash.com/random/600x400?road" alt="" class="w-full h-full absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+        </div>
+    </div> 
+
+    <div class="mb-96"></div> 
+    <!--yang ini scriptnya buat dark mode-->
+    <script>
+const checkbox = document.querySelector('#toggle');
+const html = document.querySelector('html');
+
+// Periksa preferensi tema yang disimpan/sistem
+const theme = localStorage.getItem('theme');
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (theme === 'dark' || (!theme && systemDark)) {
+    html.classList.add('dark');
+    checkbox.checked = true;
+} else {
+    html.classList.remove('dark');
+    checkbox.checked = false;
+}
+
+// Handler toggle
+checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+    }
+});
+</script>
+</body>
+</html>
