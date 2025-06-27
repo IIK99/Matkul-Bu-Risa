@@ -1,4 +1,7 @@
 // looping with do-while loop
+// do-while loop adalah looping yang mengulangi program sekali setelah kondisi terpenuhi
+// jadi dilakukan dulu satu kali, baru kemudian mengecek kondisi
+
 #include <iostream>
 using namespace std;
 
@@ -38,7 +41,3 @@ int main()
     cout << "\nProgram selesai. Terima kasih!\n";
     return 0;
 }
-// This program will keep asking for the user's age and categorize it until the user decides to stop.
-// The loop continues as long as the user inputs 'y' or 'Y' to repeat the program.
-// If the user inputs 't' or any other character, the program will terminate with a thank you message.
-// This is a simple demonstration of using loops and conditional statements in C++.
