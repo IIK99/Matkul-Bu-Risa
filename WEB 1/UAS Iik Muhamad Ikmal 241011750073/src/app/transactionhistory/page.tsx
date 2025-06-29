@@ -52,7 +52,7 @@ export default function TransaksiPage() {
     <>
       <Navbar />
       <main
-        className="min-h-screen bg-gray-100 p-6"
+        className="min-h-screen p-4 sm:p-6 md:p-10 bg-gray-100"
         style={{
           backgroundImage: "url('/images/gb.jpg')",
           backgroundRepeat: "no-repeat",
@@ -60,11 +60,16 @@ export default function TransaksiPage() {
           backgroundSize: "cover",
         }}
       >
-        <div className="max-w-3xl mx-auto bg-white p-6 rounded shadow">
-          <h1 className="text-2xl font-bold mb-4">Form Transaksi Buku</h1>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <Label htmlFor="name">Nama Transaksi</Label>
+        <div className="mx-auto w-full max-w-xl bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg">
+          <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+            Form Transaksi Buku
+          </h1>
+          <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Nama Transaksi */}
+            <div className="flex flex-col">
+              <Label htmlFor="name" className="mb-1">
+                Nama Transaksi
+              </Label>
               <Input
                 id="name"
                 name="name"
@@ -77,8 +82,11 @@ export default function TransaksiPage() {
               />
             </div>
 
-            <div>
-              <Label htmlFor="quantity">Jumlah</Label>
+            {/* Jumlah */}
+            <div className="flex flex-col">
+              <Label htmlFor="quantity" className="mb-1">
+                Jumlah
+              </Label>
               <Input
                 id="quantity"
                 type="number"
@@ -93,16 +101,19 @@ export default function TransaksiPage() {
               />
             </div>
 
-            <div>
-              <Label>Kategori</Label>
+            {/* Kategori */}
+            <div className="flex flex-col">
+              <Label htmlFor="category" className="mb-1">
+                Kategori
+              </Label>
               <Select
                 value={form.category}
                 onValueChange={(value) =>
                   setForm((prev) => ({ ...prev, category: value }))
                 }
               >
-                <SelectTrigger>
-                  <SelectValue />
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Pilih kategori" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="Peminjaman">Peminjaman</SelectItem>
@@ -111,16 +122,18 @@ export default function TransaksiPage() {
               </Select>
             </div>
 
+            {/* Tombol Simpan */}
             <Button type="submit" className="w-full mt-2">
               Simpan Transaksi
             </Button>
 
+            {/* Navigasi ke Daftar Transaksi */}
             <div className="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg text-center">
               <p className="text-gray-600 text-sm mb-2">
                 Lihat transaksi yang sudah tersimpan?
               </p>
               <Link href="/transaction/register" passHref>
-                <Button variant="outline" className="text-sm">
+                <Button variant="outline" className="text-sm w-full sm:w-auto">
                   ➤ Buka Daftar Transaksi
                 </Button>
               </Link>

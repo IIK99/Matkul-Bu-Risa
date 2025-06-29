@@ -82,30 +82,32 @@ export default function DaftarTransaksiPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gray-100 p-6"
-      style={{
+      <main
+        className="min-h-screen bg-gray-100 p-4 sm:p-6 md:p-10"
+        style={{
           backgroundImage: "url('/images/bg.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-        }}>
-        <div className="max-w-6xl mx-auto bg-white p-6 rounded shadow space-y-4">
-          <h1 className="text-2xl font-bold">Daftar Semua Transaksi</h1>
+        }}
+      >
+        <div className="mx-auto w-full max-w-7xl bg-white/90 backdrop-blur-md p-6 md:p-10 rounded-xl shadow space-y-6">
+          <h1 className="text-2xl md:text-3xl font-bold">Daftar Semua Transaksi</h1>
 
           {/* Filter */}
-          <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
+          <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
             <Input
               type="text"
               placeholder="Cari transaksi..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full md:w-1/3"
+              className="w-full lg:w-1/3"
             />
             <Select
               value={categoryFilter}
               onValueChange={(val) => setCategoryFilter(val)}
             >
-              <SelectTrigger className="w-full md:w-60">
+              <SelectTrigger className="w-full lg:w-60">
                 <SelectValue placeholder="Filter kategori" />
               </SelectTrigger>
               <SelectContent>
@@ -120,7 +122,7 @@ export default function DaftarTransaksiPage() {
                 setSortField(val as "name" | "quantity" | "category")
               }
             >
-              <SelectTrigger className="w-full md:w-60">
+              <SelectTrigger className="w-full lg:w-60">
                 <SelectValue placeholder="Urutkan" />
               </SelectTrigger>
               <SelectContent>
@@ -152,7 +154,7 @@ export default function DaftarTransaksiPage() {
                     return (
                       <tr key={idx} className="border-t">
                         <td className="p-3 border">{absoluteIndex + 1}</td>
-                        <td className="p-3 border">{tx.name}</td>
+                        <td className="p-3 border break-words max-w-xs">{tx.name}</td>
                         <td className="p-3 border text-center">{tx.quantity}</td>
                         <td className="p-3 border text-center">
                           <span
@@ -191,28 +193,27 @@ export default function DaftarTransaksiPage() {
                 </tbody>
               </table>
 
-              <div className="mt-4 flex justify-between items-center">
+              <div className="mt-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <Button
                   variant="outline"
                   onClick={() => setConfirmDeleteAllOpen(true)}
                   disabled={transactions.length === 0}
+                  className="w-full md:w-auto"
                 >
                   Hapus Semua
                 </Button>
 
-                <div className="space-x-2">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                    (page) => (
-                      <Button
-                        key={page}
-                        size="sm"
-                        variant={page === currentPage ? "default" : "outline"}
-                        onClick={() => setCurrentPage(page)}
-                      >
-                        {page}
-                      </Button>
-                    )
-                  )}
+                <div className="flex flex-wrap gap-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <Button
+                      key={page}
+                      size="sm"
+                      variant={page === currentPage ? "default" : "outline"}
+                      onClick={() => setCurrentPage(page)}
+                    >
+                      {page}
+                    </Button>
+                  ))}
                 </div>
               </div>
             </div>
@@ -224,9 +225,7 @@ export default function DaftarTransaksiPage() {
               <h2 className="font-semibold text-lg">Edit Transaksi</h2>
               <Input
                 value={editForm.name}
-                onChange={(e) =>
-                  setEditForm({ ...editForm, name: e.target.value })
-                }
+                onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
                 placeholder="Nama Transaksi"
                 required
               />
@@ -234,17 +233,13 @@ export default function DaftarTransaksiPage() {
                 type="number"
                 value={editForm.quantity}
                 min={1}
-                onChange={(e) =>
-                  setEditForm({ ...editForm, quantity: +e.target.value })
-                }
+                onChange={(e) => setEditForm({ ...editForm, quantity: +e.target.value })}
                 placeholder="Jumlah"
                 required
               />
               <Select
                 value={editForm.category}
-                onValueChange={(val) =>
-                  setEditForm({ ...editForm, category: val })
-                }
+                onValueChange={(val) => setEditForm({ ...editForm, category: val })}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Kategori" />
@@ -254,11 +249,15 @@ export default function DaftarTransaksiPage() {
                   <SelectItem value="Pengembalian">Pengembalian</SelectItem>
                 </SelectContent>
               </Select>
-              <div className="flex gap-2">
-                <Button onClick={() => setConfirmEditOpen(true)}>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <Button className="w-full sm:w-auto" onClick={() => setConfirmEditOpen(true)}>
                   Simpan Perubahan
                 </Button>
-                <Button variant="outline" onClick={() => setEditingIndex(null)}>
+                <Button
+                  variant="outline"
+                  className="w-full sm:w-auto"
+                  onClick={() => setEditingIndex(null)}
+                >
                   Batal
                 </Button>
               </div>
