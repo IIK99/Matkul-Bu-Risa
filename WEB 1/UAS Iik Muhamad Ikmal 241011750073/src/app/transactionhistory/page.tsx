@@ -65,6 +65,7 @@ export default function TransaksiPage() {
             Form Transaksi Buku
           </h1>
           <form onSubmit={handleSubmit} className="space-y-5">
+            
             {/* Nama Transaksi */}
             <div className="flex flex-col">
               <Label htmlFor="name" className="mb-1">
