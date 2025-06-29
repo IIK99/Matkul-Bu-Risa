@@ -1,0 +1,77 @@
+{
+    "cards": [
+      {
+        "name": "PSIKOLOGI ISLAM",
+        "image": "/images/ib.jpg",
+        "rating": "⭐4.8",
+        "type": "Psikologi/Filsafat"
+      },
+      {
+        "name": "FILSAFAT ISLAM",
+        "image": "/images/fi.jpg",
+        "rating": "⭐4.4",
+        "type": "Psikologi/Filsafat"
+      },
+      {
+        "name": "FILSAFAT PENDIDIKAN ISLAM",
+        "image": "/images/f.jpg",
+        "rating": "⭐4.7",
+        "type": "Psikologi/Filsafat"
+      },
+      {
+        "name": "FIQIH SUNAH",
+        "image": "/images/s.jpg",
+        "rating": "⭐5",
+        "type": "Fiqih"
+      },
+      {
+        "name": "FIQIH ISLAM",
+        "image": "/images/fs.jpg",
+        "rating": "⭐5",
+        "type": "Fiqih"
+      },
+      {
+        "name": "FIQIH SUNAH WANITA",
+        "image": "/images/fw.jpg",
+        "rating": "⭐5",
+        "type": "Fiqih"
+      },
+      {
+        "name": "AI ENGINEERING",
+        "image": "/images/ai.jpg",
+        "rating": "⭐4.9",
+        "type": "Up Skill"
+      },
+      {
+        "name": "PROMPT AI",
+        "image": "/images/ml.jpg",
+        "rating": "⭐4.1",
+        "type": "Up Skill"
+      },
+      {
+        "name": "DATA SCIENTISTS",
+        "image": "/images/ds.jpg",
+        "rating": "⭐4.9",
+        "type": "Up Skill"
+      },
+      {
+        "name": "BERANI TIDAK DISUKAI",
+        "image": "/images/bt.jpg",
+        "rating": "⭐5",
+        "type": "Self Improvement"
+      },
+      {
+        "name": "RICH DAD POOR DAD",
+        "image": "/images/rd.jpg",
+        "rating": "⭐5",
+        "type": "Self Improvement"
+      },
+      {
+        "name": "PSYCHOLOGY OF MONEY",
+        "image": "/images/pm.jpg",
+        "rating": "⭐4.7",
+        "type": "Self Improvement"
+      }
+    ]
+  }
+  
