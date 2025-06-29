@@ -1,0 +1,10 @@
+# folder berat & tidak penting
+node_modules/
+.next/
+out/
+dist/
+
+# system files
+.DS_Store
+*.log
+.env
