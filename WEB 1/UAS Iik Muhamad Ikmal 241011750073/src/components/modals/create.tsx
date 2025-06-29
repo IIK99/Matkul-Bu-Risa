@@ -47,6 +47,7 @@ const CreateModal = ({ isOpen, onClose, onCreate }: CreateModalProps) => {
     if (newProduct.image && newProduct.description && newProduct.stock && newProduct.price) {
       onCreate(newProduct);
       onClose();
+      
     //   reset form fields
       setNewProduct({
         image: "",
