@@ -123,6 +123,7 @@ export default function AdminDashboard() {
   const handleDeleteClick = (product: Product) => {
     setProductToDelete(product);
     setIsModalOpen(true);
+  };
 
   return (
     <>
